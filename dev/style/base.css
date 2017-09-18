@@ -10,6 +10,22 @@ body {
   align-items: center;
 }
 
-.pushDown {
-  margin-top: 70px;
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 70px;
 }
+
+.card {
+    width: 26rem;
+    border: black;
+    margin: 5.7em;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1em;
+    background-color: silver;
+    display: inline-block;
+  }
