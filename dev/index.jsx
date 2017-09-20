@@ -26,10 +26,13 @@ var ImageCard = createReactClass ({
 var Home = createReactClass({
   render: function() {
     return (
-      <div className= "cardLine">
-        <ImageCard title="Portfolio" imgSrc="https://imgur.com/gnc6ZWL.png" text="click to see my portfolio" navigate="/portfolio" linkText="View Portfolio"/>
+      <div>
+        <h2 className = "title"> Welcome to Jacob Isenberg&apos;s Personal Website </h2>
+        <h5 className= "title"><em>An Extraordinary Static Page Masterpiece</em> -The New York Times</h5>
+        <hr></hr>
+        <ImageCard title="Portfolio" imgSrc="https://i.imgur.com/gnc6ZWL.png" text="click to see my portfolio" navigate="/portfolio" linkText="View Portfolio"/>
         <ImageCard title="Bio" imgSrc="https://i.imgur.com/T7wtxaV.png" text="click to see my bio" navigate="/bio" linkText="View Bio"/>
-        <ImageCard title="Hobbies" imgSrc="https://imgur.com/1NPUqan.png" text="I also enjoy fun things" navigate="/hobbies" linkText="View Hobbies"/>
+        <ImageCard title="Hobbies" imgSrc="https://i.imgur.com/1NPUqan.png" text="I also enjoy fun things" navigate="/hobbies" linkText="View Hobbies"/>
       </div>
     );
   }
