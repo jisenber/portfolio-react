@@ -1,3 +1,9 @@
+/*
+
+--------------HOME PAGE SECTION--------------
+
+*/
+
 body {
   background-color: #add8e6;
 }
@@ -34,6 +40,12 @@ body {
   text-align: center;
 }
 
+/*
+
+--------------PORTFOLIO SECTION--------------
+
+*/
+
 .slideContainer {
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -43,6 +55,7 @@ body {
   justify-content: center;
   flex-direction: column;
   margin-bottom: 2em;
+  margin-left: 1em;
 }
 
 .outsideSlide {
@@ -50,15 +63,33 @@ body {
   max-width: 35%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-right: 1em;
+  border: solid black;
 }
 
+.fa-linkedin-square {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+}
+
+.fa-github-square {
+  position: absolute;
+  top: 10px;
+  right: 80px;
+}
+
+.fa-envelope {
+  position: absolute;
+  top: 10px;
+  right: 120px;
+}
 
 #counterNext {
   float: right;
   padding: 1em;
   margin: 1em;
   position: absolute;
-  top: 320px;
+  top: 380px;
   right: 40px;
   width: 155px;
 }
@@ -68,11 +99,97 @@ body {
     padding: 1em;
     margin: 1em;
     position: absolute;
-    top: 320px;
+    top: 380px;
     right: 280px;
 }
 
 
 table {
   table-layout: fixed;
+}
+
+/*
+
+--------------BIO SECTION--------------
+
+*/
+.bioImage {
+  float: left;
+  margin-top: 2em;
+  margin-left: 2em;
+  border-radius: 50%;
+}
+
+.belowBioImage {
+  float: left;
+  margin-left: 2em;
+  position: absolute;
+  top: 330px;
+  text-align: center;
+  width: 17em;
+}
+
+.bioSummary {
+  margin-right: 2em;
+  float: left;
+  width: 400px;
+  text-align: left;
+}
+
+.bioTable {
+  margin-bottom: 2em;
+  margin-top: 2em;
+  float: right;
+  width: 60%
+}
+
+.bioSectionWrapper {
+  margin-left: 2em;
+  padding: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bioSectionTitle:hover {
+  cursor: pointer;
+}
+
+.bioSectionBody {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+            animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
