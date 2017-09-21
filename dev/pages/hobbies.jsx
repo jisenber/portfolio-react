@@ -6,7 +6,7 @@ export var Hobbies = createReactClass({
   render: function() {
     return (
       <div>
-        <p> This is the Hobbies page</p>
+        <p>Pictures coming soon!</p>
       </div>
     );
   }
