@@ -103,6 +103,9 @@ body {
     right: 280px;
 }
 
+.tableWrapper {
+  z-index: 1;
+}
 
 table {
   table-layout: fixed;
@@ -113,6 +116,13 @@ table {
 --------------BIO SECTION--------------
 
 */
+
+.bioList {
+    list-style: none;
+    text-align: left;
+    margin-left: -2em;
+}
+
 .bioImage {
   float: left;
   margin-top: 2em;
@@ -136,11 +146,16 @@ table {
   text-align: left;
 }
 
+.bioParagraph {
+  font-size: 14px;
+  text-align: left;
+}
+
 .bioTable {
   margin-bottom: 2em;
   margin-top: 2em;
   float: right;
-  width: 60%
+  width: 65%
 }
 
 .bioSectionWrapper {
@@ -151,6 +166,14 @@ table {
 
 .bioSectionTitle:hover {
   cursor: pointer;
+}
+
+.bioList {
+  font-size: 16px;
+}
+
+.smallerFont {
+  font-size: 13px;
 }
 
 .bioSectionBody {
