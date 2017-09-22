@@ -66,7 +66,7 @@ var Slider = createReactClass({
 var Slide = createReactClass({
   render: function() {
     return (
-      <div>
+      <div className="portfolioContainer">
         <div className="outsideSlide">
           <table className="table">
             <thead>
@@ -80,8 +80,8 @@ var Slide = createReactClass({
             <tbody>
               <tr>
                 <td>{this.props.tools}</td>
-                <td><NavLink to={this.props.github} className = "btn btn-primary">View Repo</NavLink></td>
-                <td><NavLink to={this.props.deployed} className="btn btn-primary">View Site</NavLink></td>
+                <td><a href={this.props.github} className = "btn btn-primary">View Repo</a></td>
+                <td><a href={this.props.deployed} className="btn btn-primary">View Site</a></td>
                 <td>{this.props.devYear}</td>
               </tr>
             </tbody>
