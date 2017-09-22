@@ -149,6 +149,8 @@ export var Bio = createReactClass ({
         <div className="belowBioImage">
           <h3>Jacob Isenberg</h3>
           <h4>Software Developer</h4>
+          <h5>p: (206) 909 2235 </h5>
+          <h5>e: jisenber25@gmail.com </h5>
         </div>
         <ProfileClicker/>
       </div>
