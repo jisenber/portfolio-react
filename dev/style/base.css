@@ -25,16 +25,20 @@ body {
 }
 
 .card {
-    width: 26rem;
     border: black;
-    margin: 5.7em;
-    overflow: hidden;
+    margin: 3em;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 1em;
     background-color: silver;
-    display: inline-block;
   }
+
+.cardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
 
 .title {
   text-align: center;
