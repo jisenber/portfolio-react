@@ -103,9 +103,9 @@ var SectionBody = createReactClass ({
           <li className="smallerFont">{this.props.description}</li>
         </ul>
       </div>
-    )
+    );
   }
-})
+});
 
 
 var ProfileClicker = createReactClass({
@@ -116,7 +116,7 @@ var ProfileClicker = createReactClass({
           <SkillsTable/>
         </BioSection>
         <BioSection sectionTitle="Work Experience">
-          <SectionBody years="July 2017 - September 2017" title="Front End Web Developer (Contract)" institute="themeatempire.com" description="Implemented page-speed optimizations and UI customizations to beef jerky marketplace website that processes ~$4,000 in revenue/month. Customizations implemented primarily through jQuery in the Squarespace local development sever"/>
+          <SectionBody years="July 2017 - September 2017" title="Front End Web Developer (Contract)" institute="themeatempire.com" description="Implemented page-speed optimizations and UI customizations to beef jerky marketplace website. Customizations implemented primarily through jQuery in the Squarespace local development sever"/>
           <SectionBody years="January 2015 - August 2017" title="Project Coordinator" institute="Fred Hutchinson Cancer Research Center" description="Worked with a range of stakeholders to streamline and modernize the clinical trial implementation process for Fred Hutch’s Gene Therapy Program.  Led the organization of the Conference on Cell & Gene Therapy for HIV Cure and managed the content on the websites of Drs. Hans-Peter Kiem and Jennifer Adair. Created figures and graphics with Adobe Photoshop for utilization on posters, in oral presentations, and for publication in scientific manuscripts. Received promotion in March, 2016"/>
           <SectionBody years="December 2013 - January 2015" title="Staff Assistant" institute="United States House of Representatives" description="Managed constituent casework for Congressman Jim McDermott and acted as a liaison between constituents and federal agencies. Recruited and supervised interns and wrote letters and speeches for the Congressman. Represented and spoke on behalf of Congressman at various events."/>
         </BioSection>
