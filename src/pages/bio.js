@@ -1,18 +1,43 @@
-import React from 'react';
-import createReactClass from 'create-react-class';
+/*
+// class Weather extends Component {
+//   constructor(props) {
+//     super(props);
+//
+//     this.state = {forecast: [], lat:'', lng:'', calLat:'', calLng:'', location:'', history:[], currentDate: '', startDate: moment(), historicLocation:'', displayBarChart:false, displayHistoricChart: false, one:'', two:'', three:'', four:'', five:''};
+//     this.weatherService = new WeatherService();
+//     this.authService = new AuthService();
+//
+//     this.handleDateChange = this.handleDateChange.bind(this);
+//
+//   }
 
-//make expand collapse function
+class GallerySeries extends Component {
+  render () {
+    return (
+      <div>
+      <p>Pictures coming soon!</p>
+      </div>
+    );
+  }
+}
+*/
 
 
-var BioSection = createReactClass({
+import React, {Component} from 'react';
 
-  getInitialState: function() {
-    return {
+class BioSection extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
       open: false
     };
-  },
 
-  accordion: function(e) {
+    this.accordion = this.accordion.bind(this);
+
+  }
+
+  accordion(e) {
     e.preventDefault();
     if(this.state.open === false) {
       this.setState({
@@ -23,9 +48,9 @@ var BioSection = createReactClass({
         open: false
       });
     }
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <div className="bioSectionWrapper">
         <div className="bioSectionTitle">
@@ -37,10 +62,10 @@ var BioSection = createReactClass({
       </div>
     );
   }
-});
+}
 
-var SkillsTable = createReactClass({
-  render: function() {
+export class SkillsTable extends Component {
+  render() {
     return (
       <div className="tableWrapper">
         <table className="table">
@@ -92,10 +117,10 @@ var SkillsTable = createReactClass({
       </div>
     );
   }
-});
+}
 
-var SectionBody = createReactClass ({
-  render: function() {
+class SectionBody extends Component {
+  render () {
     return(
       <div className = "bioSectionBody">
         <ul className="bioList">
@@ -105,11 +130,11 @@ var SectionBody = createReactClass ({
       </div>
     );
   }
-});
+}
 
 
-var ProfileClicker = createReactClass({
-  render: function() {
+class ProfileClicker extends Component {
+  render () {
     return (
       <div className="bioTable">
         <BioSection sectionTitle="Technical Skills">
@@ -138,14 +163,14 @@ var ProfileClicker = createReactClass({
       </div>
     );
   }
-});
+}
 
 
-export var Bio = createReactClass ({
-  render: function() {
+export class Bio extends Component {
+  render() {
     return (
       <div>
-        <img src="https://i.imgur.com/T7wtxaV.png" className="bioImage"/>
+        <img src="https://i.imgur.com/T7wtxaV.png" className="bioImage" alt=""/>
         <div className="belowBioImage">
           <h3>Jacob Isenberg</h3>
           <h4>Software Developer</h4>
@@ -156,4 +181,4 @@ export var Bio = createReactClass ({
       </div>
     );
   }
-});
+}
