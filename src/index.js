@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import {Bio} from './pages/bio.js';
 import {Portfolio} from './pages/portfolio.js';
 import {GallerySeries} from './pages/hobbies.js';
+import PhotoPage from './pages/Photo.js';
 
 
 export class ImageCard extends Component {
@@ -71,6 +72,12 @@ export class App extends Component {
           <Route exact path="/bio" component={Bio}></Route>
           <Route exact path="/portfolio" component={Portfolio}></Route>
           <Route exact path="/hobbies" component={GallerySeries}></Route>
+          <Route exact path="/hobbies/cat" component={PhotoPage}></Route>
+          <Route exact path="/hobbies/hiking" component={PhotoPage}></Route>
+          <Route exact path="/hobbies/music" component={PhotoPage}></Route>
+          <Route exact path="/hobbies/social" component={PhotoPage}></Route>
+          <Route exact path="/hobbies/travel" component={PhotoPage}></Route>
+          <Route exact path="/hobbies/skiing" component={PhotoPage}></Route>
         </div>
       </HashRouter>
     );
