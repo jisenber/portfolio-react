@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import createReactClass from 'create-react-class';
-import {Route, HashRouter, NavLink } from 'react-router-dom';
-import {Bio} from './pages/bio.jsx';
-import {Portfolio} from './pages/portfolio.jsx';
-import {Hobbies} from './pages/hobbies.jsx';
+import {Route, HashRouter} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import {Bio} from './pages/bio.js';
+import {Portfolio} from './pages/portfolio.js';
+import {GallerySeries} from './pages/hobbies.js';
 
 
-var ImageCard = createReactClass ({
+export var ImageCard = createReactClass ({
   render: function() {
     return (
       <div className="card">
@@ -22,12 +23,12 @@ var ImageCard = createReactClass ({
   }
 });
 
-var Home = createReactClass({
+export var Home = createReactClass({
   render: function() {
     return (
       <div>
         <h2 className = "title"> Welcome to Jacob Isenberg&apos;s Personal Website </h2>
-        <h5 className= "title"><em>An Extraordinary Static Page Masterpiece</em> -The New York Times</h5>
+        <h5 className= "title"><em>An extraordinary static page masterpiece</em> -The New York Times</h5>
         <hr></hr>
         <div className="cardContainer">
           <ImageCard title="Portfolio" imgSrc="https://i.imgur.com/gnc6ZWL.png" text="click to see my web app portfolio" navigate="/portfolio" linkText="View Portfolio"/>
@@ -40,7 +41,7 @@ var Home = createReactClass({
 });
 
 //Nav Bar with links
-var Nav = createReactClass ({
+export var Nav = createReactClass ({
   render: function() {
     return (
       <div className="container-fluid">
@@ -60,15 +61,32 @@ var Nav = createReactClass ({
   }
 });
 
-ReactDOM.render(
-  <HashRouter>
-    <div>
-      <Nav/>
-      <Route exact path="/" component={Home}></Route>
-      <Route exact path="/bio" component={Bio}></Route>
-      <Route exact path="/portfolio" component={Portfolio}></Route>
-      <Route exact path="/hobbies" component={Hobbies}></Route>
-    </div>
-  </HashRouter>,
-  document.querySelector('#container')
-);
+
+export var App = createReactClass ({
+  render: function() {
+    return (
+      <HashRouter>
+        <div>
+          <Nav/>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/bio" component={Bio}></Route>
+          <Route exact path="/portfolio" component={Portfolio}></Route>
+          <Route exact path="/hobbies" component={GallerySeries}></Route>
+        </div>
+      </HashRouter>
+    );
+  }
+});
+
+
+
+const render = Component => {
+  ReactDOM.render(
+  <div>
+    <Component/>
+  </div>,
+  document.querySelector('#root')
+  );
+}
+
+render(App)
