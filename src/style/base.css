@@ -228,11 +228,3 @@ table {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
-
-
-/* HOBBIES SECTION */
-
-.cardRow {
-  display: inline-flex;
-}

@@ -1,6 +1,5 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import createReactClass from 'create-react-class';
 import {Route, HashRouter} from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import {Bio} from './pages/bio.js';
@@ -8,11 +7,11 @@ import {Portfolio} from './pages/portfolio.js';
 import {GallerySeries} from './pages/hobbies.js';
 
 
-export var ImageCard = createReactClass ({
-  render: function() {
+export class ImageCard extends Component {
+  render() {
     return (
       <div className="card">
-        <img className="card-img-top" src={this.props.imgSrc}/>
+        <img className="card-img-top" src={this.props.imgSrc} alt=""/>
         <div className="card-block">
           <h4 className="card-title"> {this.props.title} </h4>
           <p className="card-text">{this.props.text} </p>
@@ -21,10 +20,10 @@ export var ImageCard = createReactClass ({
       </div>
     );
   }
-});
+}
 
-export var Home = createReactClass({
-  render: function() {
+export class Home extends Component {
+  render() {
     return (
       <div>
         <h2 className = "title"> Welcome to Jacob Isenberg&apos;s Personal Website </h2>
@@ -38,11 +37,11 @@ export var Home = createReactClass({
       </div>
     );
   }
-});
+}
 
 //Nav Bar with links
-export var Nav = createReactClass ({
-  render: function() {
+export class Nav extends Component {
+  render() {
     return (
       <div className="container-fluid">
         <nav className="navbar navbar-default navbar-fixed-top">
@@ -59,11 +58,11 @@ export var Nav = createReactClass ({
       </div>
     );
   }
-});
+}
 
 
-export var App = createReactClass ({
-  render: function() {
+export class App extends Component {
+  render() {
     return (
       <HashRouter>
         <div>
@@ -76,7 +75,7 @@ export var App = createReactClass ({
       </HashRouter>
     );
   }
-});
+}
 
 
 

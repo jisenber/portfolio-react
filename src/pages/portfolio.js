@@ -1,8 +1,8 @@
-import React from 'react';
-import createReactClass from 'create-react-class';
+import React, { Component } from 'react';
 
-export var Portfolio = createReactClass({
-  render: function() {
+
+export class Portfolio extends Component {
+  render () {
     return (
       <div>
         <h2 className = "title"> Web App Portfolio </h2>
@@ -11,16 +11,22 @@ export var Portfolio = createReactClass({
       </div>
     );
   }
-});
+}
 
-var Slider = createReactClass({
-  getInitialState: function() {
-    return {
-      count: 1 //creates this.state.count
+class Slider extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      count: 1
     };
-  },
-  //increase and decrease carousel functions
-  increase: function(e) {
+
+    this.increase = this.increase.bind(this);
+    this.decrease = this.decrease.bind(this);
+  }
+
+  increase(e) {
+    e.preventDefault();
     if(this.state.count < 4) {
       this.setState ({
         count: this.state.count + 1
@@ -30,9 +36,10 @@ var Slider = createReactClass({
         count: 1
       });
     }
+  }
+
+  decrease(e) {
     e.preventDefault();
-  },
-  decrease: function(e) {
     if (this.state.count > 1) {
       this.setState ({
         count: this.state.count -1
@@ -42,10 +49,9 @@ var Slider = createReactClass({
         count: 4
       });
     }
-    e.preventDefault();
-  },
 
-  render: function() {
+  }
+  render () {
     return (
       <div>
         { this.state.count === 1 ? <Slide imgSrc="https://i.imgur.com/763FtEB.png" title="Allweather" desc="A weather forecasting tool for any location or time" tools="React, React-vis, Mongo, Express," github="https://github.com/jisenber/weatherapp-frontend" deployed="https://allweather.herokuapp.com" devYear= "2017"/> : null }
@@ -57,11 +63,11 @@ var Slider = createReactClass({
       </div>
     );
   }
-});
+}
 
-//
-var Slide = createReactClass({
-  render: function() {
+
+class Slide extends Component {
+  render() {
     return (
       <div className="portfolioContainer">
         <div className="outsideSlide">
@@ -86,7 +92,7 @@ var Slide = createReactClass({
         </div>
         <div className="slideContainer">
           <div className="image">
-            <img src={this.props.imgSrc}/>
+            <img src={this.props.imgSrc} alt =""/>
           </div>
           <div className="main">
             <h3>{this.props.title}</h3>
@@ -96,4 +102,4 @@ var Slide = createReactClass({
       </div>
     );
   }
-});
+}
