@@ -54,10 +54,10 @@ class Slider extends Component {
   render () {
     return (
       <div className = "sliderBox">
-        { this.state.count === 1 ? <a target="_blank" rel="noopener noreferrer" href="https://allweather.herokuapp.com"> <Slide imgSrc="https://i.imgur.com/szTjhCu.png" title="Allweather" desc="A weather forecasting tool for any location or time" tools="React, React-vis, Mongo, Express," github="https://github.com/jisenber/weatherapp-frontend" deployed="https://allweather.herokuapp.com" devYear= "2017" href/></a> : null }
-        { this.state.count === 2 ? <a target="_blank" rel="noopener noreferrer" href="https://parking-hall-of-shame.herokuapp.com"><Slide imgSrc="https://i.imgur.com/uqW6XlH.png" title="Space Invaders/Parking Hall of Shame" desc="A platform to shame those who park poorly" tools="Node, Express, jQuery, Mongo, Nunjucks" github="https://github.com/jkwong5/ParkingHOS" deployed="https://parking-hall-of-shame.herokuapp.com" devYear= "2016, 2017 (refactor)"/></a> : null }
-        { this.state.count === 3 ? <a target="_blank" rel="noopener noreferrer" href="https://devolunteer.herokuapp.com"> <Slide imgSrc="https://i.imgur.com/cnP4xe3.png" title="Devolunteer" desc="A platform to connect software developers and non-profits" tools="Mongo, Express, Angular, Node" github="https://github.com/devolunteer/devolunteer" deployed="https://devolunteer.herokuapp.com" devYear="2017"/></a> : null }
-        { this.state.count === 4 ? <a target="_blank" rel="noopener noreferrer" href="http://jisenber.github.io/World_Capitals_Game/"> <Slide imgSrc="https://i.imgur.com/XGGrrum.png" title="World Capitals Game" desc="A world capitals trivia game (first app I ever built!)" tools="Sweet Vanilla JavaScript" github="https://github.com/jisenber/World_Capitals_Game" deployed="https://jisenber.github.io/World_Capitals_Game" devYear="2015"/></a> : null }
+        { this.state.count === 1 ? <Slide linkTo = "https://allweather.herokuapp.com" imgSrc="https://i.imgur.com/szTjhCu.png" title="Allweather" desc="A weather forecasting tool for any location or time" tools="React, React-vis, Mongo, Express," github="https://github.com/jisenber/weatherapp-frontend" deployed="https://allweather.herokuapp.com" devYear= "2017" href/> : null }
+        { this.state.count === 2 ? <Slide linkTo = "https://parking-hall-of-shame.herokuapp.com" imgSrc="https://i.imgur.com/uqW6XlH.png" title="Space Invaders/Parking Hall of Shame" desc="A platform to shame those who park poorly" tools="Node, Express, jQuery, Mongo, Nunjucks" github="https://github.com/jkwong5/ParkingHOS" deployed="https://parking-hall-of-shame.herokuapp.com" devYear= "2016, 2017 (refactor)"/> : null }
+        { this.state.count === 3 ? <Slide linkTo = "https://devolunteer.herokuapp.com" imgSrc="https://i.imgur.com/cnP4xe3.png" title="Devolunteer" desc="A platform to connect software developers and non-profits" tools="Mongo, Express, Angular, Node" github="https://github.com/devolunteer/devolunteer" deployed="https://devolunteer.herokuapp.com" devYear="2017"/> : null }
+        { this.state.count === 4 ? <Slide linkTo = "http://jisenber.github.io/World_Capitals_Game/" imgSrc="https://i.imgur.com/XGGrrum.png" title="World Capitals Game" desc="A world capitals trivia game (first app I ever built!)" tools="Sweet Vanilla JavaScript" github="https://github.com/jisenber/World_Capitals_Game" deployed="https://jisenber.github.io/World_Capitals_Game" devYear="2015"/> : null }
         <button className="btn btn-primary" id="counterNext" onClick={this.increase}>NEXT PROJECT</button>
         <button className="btn btn-primary" id="counterPrev" onClick={this.decrease}>PREVIOUS PROJECT</button>
       </div>
@@ -92,7 +92,9 @@ class Slide extends Component {
         </div>
         <div className="slideContainer">
           <div className="image">
+          <a href = {this.props.linkTo} target="_blank" rel="noopener noreferrer">
             <img src={this.props.imgSrc} alt =""/>
+          </a>
           </div>
           <div className="main">
             <h3>{this.props.title}</h3>
