@@ -36,7 +36,6 @@ class PhotoPage extends Component {
   loadImages() {
     var images = [];
     for (var i = 1; i < 10; i++) {
-      console.log(`${sourceURL}/${this.props.hobby}/${this.props.img}${i}.png`);
       images.push({
         original: `${sourceURL}/${this.props.hobby}/${this.props.img}${i}.png`,
         thumbnail: `${sourceURL}/${this.props.hobby}/${this.props.img}${i}.png`
@@ -51,7 +50,6 @@ class PhotoPage extends Component {
       images: images
     })
   }
-
 
 
   render() {

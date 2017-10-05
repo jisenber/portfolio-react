@@ -73,7 +73,7 @@ export class App extends Component {
           <Route exact path="/portfolio" component={Portfolio}></Route>
           <Route exact path="/hobbies" component={GallerySeries}></Route>
           <Route exact path="/hobbies/cat" render={() => ( <PhotoPage  hobby='cat' img="CAT_IMG_" />)}/>
-          <Route exact path="/hobbies/hiking" component={PhotoPage}></Route>
+          <Route exact path="/hobbies/hiking" render={() => ( <PhotoPage  hobby='hiking' img="HIKING_IMG_" />)}/>
           <Route exact path="/hobbies/music" component={PhotoPage}></Route>
           <Route exact path="/hobbies/social" component={PhotoPage}></Route>
           <Route exact path="/hobbies/travel" component={PhotoPage}></Route>
