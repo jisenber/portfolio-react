@@ -44,7 +44,7 @@ class PhotoPage extends Component {
     }
     return images
   }
-//
+
   componentWillMount() {
     var images = this.loadImages()
     this.setState({
