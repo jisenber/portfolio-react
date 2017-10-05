@@ -15,29 +15,38 @@ import ImageGallery from 'react-image-gallery';
 import React, {Component} from 'react'
 import 'react-image-gallery/styles/css/image-gallery.css'
 
+var sourceURL = 'https://raw.githubusercontent.com/jisenber/portfolio-react/photopages/src/assets/hobby_images/skiing/'
 
-var images = [];
-
-function loadImages(pathway) {
+function loadImages() {
+  var images = [];
   for (var i = 1; i < 6; i++) {
     images.push({
-      original: pathway,
-      thumbnail: pathway
+      original: `${sourceURL}SKI_IMG_${i}.png`,
+      thumbnail: `${sourceURL}SKI_IMG_${i}.png`
     })
   }
   return images
 }
 
 class PhotoPage extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      images: []
+    }
+
+  }
 
   handleImageLoad(event) {
     console.log('Image loaded ', event.target)
   }
 
   componentWillMount() {
-    images = loadImages('https://i.imgur.com/clml59T.png')
-    console.log('images loaded');
-    console.log(images);
+    var images = loadImages()
+    this.setState({
+      images: images
+    })
   }
 
 
@@ -63,7 +72,7 @@ class PhotoPage extends Component {
     <div className = "picturePageContainer">
       <div className = "imageContainer">
         <ImageGallery
-          items={images}
+          items={this.state.images}
           slideInterval={2000}
           onImageLoad={this.handleImageLoad}/>
       </div>
