@@ -16,18 +16,8 @@ import React, {Component} from 'react'
 import 'react-image-gallery/styles/css/image-gallery.css'
 import '../style/react-image-override.css'
 
-var sourceURL = 'https://raw.githubusercontent.com/jisenber/portfolio-react/photopages/src/assets/hobby_images/skiing/'
+var sourceURL = 'https://raw.githubusercontent.com/jisenber/portfolio-react/photopages/src/assets/hobby_images'
 
-function loadImages() {
-  var images = [];
-  for (var i = 1; i < 10; i++) {
-    images.push({
-      original: `${sourceURL}SKI_IMG_${i}.png`,
-      thumbnail: `${sourceURL}SKI_IMG_${i}.png`
-    })
-  }
-  return images
-}
 
 class PhotoPage extends Component {
   constructor(props) {
@@ -36,15 +26,26 @@ class PhotoPage extends Component {
     this.state = {
       images: []
     }
-
+    this.loadImages = this.loadImages.bind(this)
   }
 
   handleImageLoad(event) {
     console.log('Image loaded ', event.target)
   }
 
+  loadImages() {
+    var images = [];
+    for (var i = 1; i < 10; i++) {
+      images.push({
+        original: `${sourceURL}/${this.props.hobby}/${this.props.img}${i}.png`,
+        thumbnail: `${sourceURL}/${this.props.hobby}/${this.props.img}${i}.png`
+      })
+    }
+    return images
+  }
+
   componentWillMount() {
-    var images = loadImages()
+    var images = this.loadImages()
     this.setState({
       images: images
     })
