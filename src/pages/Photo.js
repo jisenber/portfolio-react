@@ -36,6 +36,7 @@ class PhotoPage extends Component {
   loadImages() {
     var images = [];
     for (var i = 1; i < 10; i++) {
+      console.log(`${sourceURL}/${this.props.hobby}/${this.props.img}${i}.png`);
       images.push({
         original: `${sourceURL}/${this.props.hobby}/${this.props.img}${i}.png`,
         thumbnail: `${sourceURL}/${this.props.hobby}/${this.props.img}${i}.png`
@@ -43,7 +44,7 @@ class PhotoPage extends Component {
     }
     return images
   }
-
+//
   componentWillMount() {
     var images = this.loadImages()
     this.setState({
@@ -55,21 +56,6 @@ class PhotoPage extends Component {
 
   render() {
 
-    // const images = [
-    //   {
-    //     original: require('../assets/hobby_images/skiing/SKI_IMG_1.png'),
-    //     thumbnail: require('../assets/hobby_images/skiing/SKI_IMG_1.png'),
-    //   },
-    //   {
-    //     original: require('../assets/hobby_images/skiing/SKI_IMG_2.png'),
-    //     thumbnail: require('../assets/hobby_images/skiing/SKI_IMG_2.png')
-    //   },
-    //   {
-    //     original: 'http://lorempixel.com/1000/600/nature/3/',
-    //     thumbnail: 'http://lorempixel.com/250/150/nature/3/'
-    //   }
-    // ]
-//
     return (
     <div className = "picturePageContainer">
       <div className = "imageContainer">
