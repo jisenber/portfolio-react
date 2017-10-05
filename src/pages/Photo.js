@@ -19,7 +19,7 @@ var sourceURL = 'https://raw.githubusercontent.com/jisenber/portfolio-react/phot
 
 function loadImages() {
   var images = [];
-  for (var i = 1; i < 6; i++) {
+  for (var i = 1; i < 9; i++) {
     images.push({
       original: `${sourceURL}SKI_IMG_${i}.png`,
       thumbnail: `${sourceURL}SKI_IMG_${i}.png`
