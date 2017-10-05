@@ -10,6 +10,7 @@
     "gh-pages": "^1.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-image-gallery": "^0.8.3",
     "react-photo-gallery": "^6.0.5",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",

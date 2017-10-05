@@ -1,8 +1,12 @@
 {
-  "main.js": "static/js/main.9ec6080e.js",
-  "main.js.map": "static/js/main.9ec6080e.js.map",
+  "main.css": "static/css/main.3b87ce70.css",
+  "main.css.map": "static/css/main.3b87ce70.css.map",
+  "main.js": "static/js/main.2bd41bcc.js",
+  "main.js.map": "static/js/main.2bd41bcc.js.map",
   "static/media/cat_cover_small.png": "static/media/cat_cover_small.e652bc1a.png",
   "static/media/hiking_cover.png": "static/media/hiking_cover.d93ff8be.png",
+  "static/media/music_cover.png": "static/media/music_cover.e392bacd.png",
   "static/media/skiing_cover.png": "static/media/skiing_cover.4eecbdcd.png",
-  "static/media/social_cover_small.png": "static/media/social_cover_small.ce40a919.png"
+  "static/media/social_cover_small.png": "static/media/social_cover_small.ce40a919.png",
+  "static/media/travel_cover_small.png": "static/media/travel_cover_small.2f6e9aed.png"
 }
