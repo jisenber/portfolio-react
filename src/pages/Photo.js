@@ -14,12 +14,13 @@
 import ImageGallery from 'react-image-gallery';
 import React, {Component} from 'react'
 import 'react-image-gallery/styles/css/image-gallery.css'
+import '../style/react-image-override.css'
 
 var sourceURL = 'https://raw.githubusercontent.com/jisenber/portfolio-react/photopages/src/assets/hobby_images/skiing/'
 
 function loadImages() {
   var images = [];
-  for (var i = 1; i < 9; i++) {
+  for (var i = 1; i < 10; i++) {
     images.push({
       original: `${sourceURL}SKI_IMG_${i}.png`,
       thumbnail: `${sourceURL}SKI_IMG_${i}.png`
