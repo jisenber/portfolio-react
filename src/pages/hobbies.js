@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {ImageCard} from '../index.js';
 
 
-//
+
 export class GallerySeries extends Component{
   render () {
     return (
