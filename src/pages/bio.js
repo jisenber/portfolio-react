@@ -1,28 +1,3 @@
-/*
-// class Weather extends Component {
-//   constructor(props) {
-//     super(props);
-//
-//     this.state = {forecast: [], lat:'', lng:'', calLat:'', calLng:'', location:'', history:[], currentDate: '', startDate: moment(), historicLocation:'', displayBarChart:false, displayHistoricChart: false, one:'', two:'', three:'', four:'', five:''};
-//     this.weatherService = new WeatherService();
-//     this.authService = new AuthService();
-//
-//     this.handleDateChange = this.handleDateChange.bind(this);
-//
-//   }
-
-class GallerySeries extends Component {
-  render () {
-    return (
-      <div>
-      <p>Pictures coming soon!</p>
-      </div>
-    );
-  }
-}
-*/
-
-
 import React, {Component} from 'react';
 
 class BioSection extends Component {
@@ -83,17 +58,17 @@ export class SkillsTable extends Component {
             <tr>
               <td>
                 <ul className="bioList">
-                  <li>JavaScript</li><li>HTML</li><li>CSS</li><li>Bash</li><li>JSX</li>
+                  <li>Apex</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Bash</li>
                 </ul>
               </td>
               <td>
                 <ul className="bioList">
-                  <li>React</li><li>Angular</li><li>jQuery</li>
+                  <li>Lightning (Aura)</li><li></li>Visualforce<li>React</li><li>Redux</li><li>Angular</li><li>jQuery</li>
                 </ul>
               </td>
               <td>
                 <ul className="bioList">
-                  <li>Node</li> <li>MongoDB</li> <li>Express</li>
+                  <li>Apex</li><li>Node</li> <li>MongoDB</li> <li>Express</li>
                 </ul>
               </td>
               <td>
@@ -103,12 +78,12 @@ export class SkillsTable extends Component {
               </td>
               <td>
                 <ul className="bioList">
-                  <li>Mocha</li> <li>Chai</li> <li>Karma</li>
+                  <li>Apex (again)</li><li>Mocha</li> <li>Chai</li>
                 </ul>
               </td>
               <td>
                 <ul className="bioList">
-                  <li>Git</li> <li>Webpack</li> <li>Babel</li> <li>Heroku</li><li>Gulp</li> <li>Superagent</li> <li>Bcrypt</li> <li>Passport</li>
+                  <li>Salesforce</li><li>Git</li><li>Workbench</li><li>JIRA</li><li>Webpack</li>
                 </ul>
               </td>
             </tr>
@@ -141,11 +116,13 @@ class ProfileClicker extends Component {
           <SkillsTable/>
         </BioSection>
         <BioSection sectionTitle="Work Experience">
+          <SectionBody years="November 2017 - Present" title="Software Developer II" institute="Bluewolf, an IBM Company" description="Currently work in a consulting role developing custom Salesforce applications for several large companies. Extensive experience with Lightning and the Aura JavaScript framework as well as Apex and Visualforce. Work in an agile setting using variety of project management tools including but not limited to tools from Atlassian, IBM, and Google. Received promotion in July, 2018"/>
           <SectionBody years="July 2017 - September 2017" title="Front End Web Developer (Contract)" institute="themeatempire.com" description="Implemented page-speed optimizations and UI customizations to beef jerky marketplace website. Customizations implemented primarily through jQuery in the Squarespace local development sever"/>
           <SectionBody years="January 2015 - August 2017" title="Project Coordinator" institute="Fred Hutchinson Cancer Research Center" description="Worked with a range of stakeholders to streamline and modernize the clinical trial implementation process for Fred Hutch’s Gene Therapy Program.  Led the organization of the Conference on Cell & Gene Therapy for HIV Cure and managed the content on the websites of Drs. Hans-Peter Kiem and Jennifer Adair. Created figures and graphics with Adobe Photoshop for utilization on posters, in oral presentations, and for publication in scientific manuscripts. Received promotion in March, 2016"/>
           <SectionBody years="December 2013 - January 2015" title="Staff Assistant" institute="United States House of Representatives" description="Managed constituent casework for Congressman Jim McDermott and acted as a liaison between constituents and federal agencies. Recruited and supervised interns and wrote letters and speeches for the Congressman. Represented and spoke on behalf of Congressman at various events."/>
         </BioSection>
         <BioSection sectionTitle="Education">
+          <SectionBody years="2017 - present" institute="Salesforce" title="Certificate" description="Platform Developer I"/>
           <SectionBody years="2016 - 2017" institute="Code Fellows" title="Certificate" description="Advanced Software Development in Full Stack JavaScript (Nights & Weekends track)"/>
           <SectionBody years="2009 - 2013" institute="University of Washington" title="Bachelor of Science" description="Major: Environmental Science"/>
         </BioSection>
